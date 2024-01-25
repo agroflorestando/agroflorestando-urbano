@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  agroflorestando-urbano-dev:
+    image: agroflorestando-urbano-dev
+    container_name: agroflorestando-urbano-dev
+    build:
+      context: ../.
+      dockerfile: ./.devcontainer/Dockerfile
+    working_dir: /agroflorestando-urbano
+    volumes:
+      - ..:/agroflorestando-urbano:cached
+      - /var/run/docker.sock:/var/run/docker.sock
+    tty: true

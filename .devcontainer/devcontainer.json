@@ -1,0 +1,19 @@
+{
+  "name": "Existing Docker Compose (Extend)",
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
+  "service": "agroflorestando-urbano-dev",
+	"workspaceFolder": "/agroflorestando-urbano",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+        "ms-vscode.vscode-typescript-next",
+        "eamodio.gitlens",
+        "ms-azuretools.vscode-docker",
+        "wix.vscode-import-cost",
+        "keatsdothu.summer-nights-lullaby"
+      ]
+		}
+	}
+}
