@@ -1,0 +1,21 @@
+.agro-navbar {
+  @include brutal;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: flex;
+      flex: 1 1 0;
+      flex-direction: column;
+
+      i-tabler {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}

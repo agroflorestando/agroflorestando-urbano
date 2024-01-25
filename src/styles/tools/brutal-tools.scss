@@ -1,0 +1,12 @@
+@mixin brutal-border {
+  border: 2px solid black;
+}
+
+@mixin brutal-radius {
+  border-radius: 50%;
+}
+
+@mixin brutal {
+  @include brutal-border;
+  @include brutal-radius;
+}

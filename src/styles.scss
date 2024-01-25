@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+//  theme
+@import 'styles/themes/default';
+
+//  reset
+@import 'styles/elements/body';
+
+//  tools
+@import 'styles/tools/brutal-tools';
+
+//  components
+@import 'styles/components/navbar';

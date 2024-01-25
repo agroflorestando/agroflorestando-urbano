@@ -1,8 +1,9 @@
 body[data-theme="default"] {
   --base: rgb(247, 244, 166);
-  --separator: rgb(206, 204, 140);
   --baseContrast: rgb(15, 20, 25);
   --baseText: var(--baseContrast);
+
+  --separator: rgb(206, 204, 140);
 
   --primary: rgb(14, 115, 18);
   --primaryContrast: rgb(240, 240, 229);
