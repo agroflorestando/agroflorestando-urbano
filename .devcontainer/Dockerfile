@@ -1,6 +1,6 @@
 FROM node:20
 
-RUN npm install @angular/cli typescript -g
+RUN npm install @angular/cli typescript @compodoc/compodoc eslint sass-lint sassdoc husky -g
 
 WORKDIR /agroflorestando-urbano
 

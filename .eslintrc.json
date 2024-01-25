@@ -3,6 +3,12 @@
   "ignorePatterns": [
     "projects/**/*"
   ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": [
+    "ban"
+  ],
   "overrides": [
     {
       "files": [
