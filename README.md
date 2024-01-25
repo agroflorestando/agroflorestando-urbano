@@ -1,27 +1,14 @@
-# AgroflorestandoUrbano
+> E a terra produziu erva, erva dando semente conforme a sua espécie, e a árvore frutífera, cuja semente está nela conforme a sua espécie; e viu Deus que era bom.
+> Gênesis 1:12
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+# Agroflorestando - Urbano
 
-## Development server
+Agroflorestando, módulo Urbano, busca fornecer ferramentas para manutenção colaborativa de árvores de interesse comum, como flores e frutíferas.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Não é segredo que a realidade é uma contínua transformação de energia e, sem a correta adubação a árvore não dará frutos, mas com adubo em excesso você também pode ter problemas irrevesíveis.
 
-## Code scaffolding
+Este aplicativo se propõe como ferramenta para manutenção de plantas que estão em área comum ou área pública, permitindo que as pessoas que dão manutenção nas árvores de sua região de forma voluntária tenham meios de se organizar.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Conheça pessoas de sua região que também cuidam das árvores. Conheça pessoas que consomem as frutas, folhas, madeira e flores das árvores que você cuida. Receba Zap e Reações em seu Ypê colorido ou saiba quantas pessoas seu boldo já ajudou.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Adequado para mapear e organizar a manutenção de plantas de interesse comum em ruas, praças, condomínios ou plantas individuais.
