@@ -7,8 +7,9 @@ app-root {
 }
 
 body {
-  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background-color: var(--base);
   color: var(--baseText);
-  margin: 0;
+  font-family: Roboto, Arial;
+  padding: 1rem 2rem 1rem 1rem;
+  box-sizing: border-box;
 }
