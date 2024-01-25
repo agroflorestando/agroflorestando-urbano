@@ -15,5 +15,4 @@ ENV TZ America/Sao_Paulo
 EXPOSE 9229
 EXPOSE 4200
 
-# The run the start script
 CMD [ "/bin/bash" ]
