@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ConfigComponent } from './config.component';
+import { MyListsComponent } from './my-lists.component';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    ConfigComponent
+    MyListsComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild([
       {
         path: '',
-        component: ConfigComponent
+        component: MyListsComponent
       }
     ])
   ]
 })
-export class ConfigModule { }
+export class MyListsModule { }
