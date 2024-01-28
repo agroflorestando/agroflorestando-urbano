@@ -1,0 +1,16 @@
+.agro-main-button {
+  @include brutal-border-thin;
+  @include brutal-rounded;
+
+  position: absolute;
+  right: 10px;
+  bottom: -10px;
+  width: 48px;
+  height: 48px;
+
+  &:active {
+    box-shadow: none;
+    right: calc(10px - $brutalBorderSize);
+    bottom: calc(-10px - $brutalBorderSize);
+  }
+}

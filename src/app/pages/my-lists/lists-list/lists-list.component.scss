@@ -1,3 +1,7 @@
+:host {
+  position: relative;
+}
+
 .agro-list {
   li {
     display: flex;
@@ -51,4 +55,8 @@
   &-navigation {
     display: flex;
   }
+}
+
+.agro-main-button {
+  background-color: var(--secondary);
 }
