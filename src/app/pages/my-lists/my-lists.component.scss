@@ -1,0 +1,22 @@
+.agro-treelist-item {
+  display: flex;
+  
+  &-icon {
+    border-radius: 50%;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+  }
+
+  &-info {
+
+  }
+
+  &-navigation {
+
+  }
+}

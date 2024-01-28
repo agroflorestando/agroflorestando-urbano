@@ -1,32 +1,22 @@
 <section class="agro-page-container">
   <ul class="agro-list">
-    <li>
-      <span>⭐</span>
-      <span>Favoritas</span>
-    </li>
-    <li>
-      <span>🏡</span>
-      <span>Plantas pessoais</span>
-    </li>
-    <li>
-      <span>🍎</span>
-      <span>Frutíferas perto de casa</span>
-    </li>
-    <li>
-      <span>🌺</span>
-      <span>Flores da primavera</span>
-    </li>
-    <li>
-      <span>🌻</span>
-      <span>Flores de verão</span>
-    </li>
-    <li>
-      <span>🐝</span>
-      <span>Escolhidas para adubar</span>
-    </li>
-    <li>
-      <span>🌳</span>
-      <span>Árvores que cultivei</span>
+    <li *ngFor="let list of lists">
+      <section class="agro-treelist-item">
+        <div class="agro-treelist-item-icon">{{list.icon}}</div>
+        <div class="agro-treelist-item-info">
+          <h3>{{list.title}}</h3>
+          <span>{{list.description}}</span>
+          <span>criador por {{list.author}}</span>
+        </div>
+        <nav class="agro-treelist-item-navigation">
+          <button type="button" class="agro-button agro-button-icon">
+            <i-tabler name="world"></i-tabler>
+          </button>
+          <button type="button" class="agro-button agro-button-icon">
+            <i-tabler name="caret-right"></i-tabler>
+          </button>
+        </nav>
+      </section>
     </li>
   </ul>
 </section>
