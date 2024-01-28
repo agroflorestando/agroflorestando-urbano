@@ -1,5 +1,13 @@
+.agro-list {
+  li {
+    display: flex;
+  }
+}
+
 .agro-treelist-item {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
   
   &-icon {
     border-radius: 50%;
@@ -15,6 +23,7 @@
 
   &-info {
     flex: 1 1 0px;
+    overflow: hidden;
 
     h3 {
       margin: 0;
@@ -28,7 +37,8 @@
     }
 
     &-author {
-
+      display: block;
+      font-size: 11px;
     }
   }
 

@@ -1,9 +1,5 @@
-button.agro-button {
-  @include brutal;
-}
-
 button.agro-button-icon {
-  @include thin-brutal-border;
+  @include brutal-border-thin;
   @include brutal-rounded;
 
   width: 32px;
@@ -16,4 +12,8 @@ button.agro-button-icon {
 
   align-items: center;
   justify-content: center;
+
+  &:active {
+    @include brutal-border-thin-active;
+  }
 }
