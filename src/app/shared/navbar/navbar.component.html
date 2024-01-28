@@ -1,27 +1,42 @@
 <nav class="agro-navbar">
   <ul>
     <li routerLink="/my/lists">
-      <i-tabler name="trees"></i-tabler>
+      <i-tabler
+        name="trees"
+        [class.is-active]="current === CONTEXT_MY_PLANTS"
+      ></i-tabler>
       <span>Listas</span>
     </li>
 
     <li routerLink="/search">
-      <i-tabler name="map-search"></i-tabler>
+      <i-tabler
+        name="map-search"
+        [class.is-active]="current === CONTEXT_SEARCH"
+      ></i-tabler>
       <span>Pesquisar</span>
     </li>
 
     <li>
-      <i-tabler name="lock-square-rounded-filled"></i-tabler>
+      <i-tabler
+        name="lock-square-rounded-filled"
+        [class.is-active]="current === CONTEXT_AUTHENTICATE"
+      ></i-tabler>
       <span>Autenticar</span>
     </li>
 
     <li routerLink="/camera">
-      <i-tabler name="qrcode"></i-tabler>
+      <i-tabler
+        name="qrcode"
+        [class.is-active]="current === CONTEXT_CAMERA"
+      ></i-tabler>
       <span>QRCode</span>
     </li>
 
     <li routerLink="/config">
-      <i-tabler name="settings"></i-tabler>
+      <i-tabler
+        name="settings"
+        [class.is-active]="current === CONTEXT_CONFIG"
+      ></i-tabler>
       <span>Configs</span>
     </li>
   </ul>
