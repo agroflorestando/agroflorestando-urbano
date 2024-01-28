@@ -4,6 +4,10 @@
   }
 }
 
+.agro-button-icon {
+  margin-right: .5rem;
+}
+
 .agro-treelist-item {
   display: flex;
   justify-content: space-between;
@@ -33,7 +37,9 @@
     }
 
     &-description {
-
+      display: block;
+      margin: .25rem 0;
+      font-size: 14px;
     }
 
     &-author {

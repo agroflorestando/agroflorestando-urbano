@@ -13,8 +13,11 @@
           </span>
         </div>
         <nav class="agro-treelist-item-navigation">
-          <button type="button" class="agro-button agro-button-icon">
+          <button *ngIf="list.public" type="button" class="agro-button agro-button-icon">
             <i-tabler name="world"></i-tabler>
+          </button>
+          <button *ngIf="!list.public" type="button" class="agro-button agro-button-icon">
+            <i-tabler name="lock"></i-tabler>
           </button>
           <button type="button" class="agro-button agro-button-icon">
             <i-tabler name="caret-right"></i-tabler>
