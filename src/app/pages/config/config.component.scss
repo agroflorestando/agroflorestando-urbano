@@ -1,0 +1,8 @@
+// FIXME: criar um path padrão
+@import '../../../styles/tools/reset-list';
+
+nav {
+  ul {
+    @include reset-list;
+  }
+}

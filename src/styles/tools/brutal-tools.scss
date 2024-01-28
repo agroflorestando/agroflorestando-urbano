@@ -16,9 +16,9 @@
 @mixin brutal-border-active {
   @include brutal-border;
   @include brutal-button-active;
+
   top: 5px;
   left: 5px;
-    
 }
 
 @mixin brutal-border-thin-active {

@@ -5,9 +5,12 @@ button.agro-button-icon {
   width: 32px;
   height: 32px;
 
-  display: flex;
   flex: 0 0 32px;
   padding: .15rem;
+
+  display: flex;
+  position: relative;
+  outline: none;
 
   align-items: center;
   justify-content: center;

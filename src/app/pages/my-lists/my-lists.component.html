@@ -2,7 +2,9 @@
   <ul class="agro-list">
     <li *ngFor="let list of lists">
       <article class="agro-treelist-item">
-        <div class="agro-treelist-item-icon">{{list.icon}}</div>
+        <div class="agro-treelist-item-icon">
+          {{list.icon}}
+        </div>
         <div class="agro-treelist-item-info">
           <h3>{{list.title}}</h3>
           <span class="agro-treelist-item-info-description">
@@ -15,6 +17,7 @@
         <nav class="agro-treelist-item-navigation">
           <button *ngIf="list.public" type="button" class="agro-button agro-button-icon">
             <i-tabler name="world"></i-tabler>
+            <span class="agro-notification">{{list.notifications}}</span>
           </button>
           <button *ngIf="!list.public" type="button" class="agro-button agro-button-icon">
             <i-tabler name="lock"></i-tabler>

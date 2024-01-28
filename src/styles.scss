@@ -1,12 +1,13 @@
 //  theme
 @import 'styles/themes/default';
 
+//  tools
+@import 'styles/tools/brutal-tools';
+@import 'styles/tools/reset-list';
+
 //  reset
 @import 'styles/elements/body';
 @import 'styles/elements/heading';
-
-//  tools
-@import 'styles/tools/brutal-tools';
 
 //  components
 @import 'styles/components/header';
@@ -14,3 +15,4 @@
 @import 'styles/components/page-container';
 @import 'styles/components/list';
 @import 'styles/components/button-icon';
+@import 'styles/components/notifications';
