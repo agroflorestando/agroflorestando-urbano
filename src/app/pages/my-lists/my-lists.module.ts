@@ -4,6 +4,7 @@ import { MyListsComponent } from './my-lists.component';
 import { RouterModule } from '@angular/router';
 import { IconCaretRight, IconLock, IconWorld } from 'angular-tabler-icons/icons';
 import { TablerIconsModule } from 'angular-tabler-icons';
+import { myListsRoutes } from './my-lists.routes';
 
 @NgModule({
   declarations: [
@@ -11,17 +12,10 @@ import { TablerIconsModule } from 'angular-tabler-icons';
   ],
   imports: [
     CommonModule,
-    TablerIconsModule.pick({
-      IconCaretRight,
-      IconWorld,
-      IconLock
-    }),
-    RouterModule.forChild([
-      {
-        path: '',
-        component: MyListsComponent
-      }
-    ])
+    RouterModule.forChild([{
+      path: '',
+      children: myListsRoutes
+    }])
   ]
 })
 export class MyListsModule { }

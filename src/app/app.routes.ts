@@ -5,7 +5,7 @@ export const routes: Routes = [
     path: '',
     children: [
       {
-        path: 'my-plants',
+        path: 'my',
         loadChildren: () => import('./pages/my-lists/my-lists.module').then(m => m.MyListsModule),
       },
 

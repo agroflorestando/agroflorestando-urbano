@@ -1,0 +1,54 @@
+.agro-list {
+  li {
+    display: flex;
+  }
+}
+
+.agro-button-icon {
+  margin-right: .5rem;
+}
+
+.agro-treelist-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  
+  &-icon {
+    border-radius: 50%;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: .5rem;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+  }
+
+  &-info {
+    flex: 1 1 0px;
+    overflow: hidden;
+
+    h3 {
+      margin: 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    &-description {
+      display: block;
+      margin: .25rem 0;
+      font-size: 14px;
+    }
+
+    &-author {
+      display: block;
+      font-size: 11px;
+    }
+  }
+
+  &-navigation {
+    display: flex;
+  }
+}
