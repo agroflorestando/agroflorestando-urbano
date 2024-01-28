@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ActivatedRouteSnapshot, ActivationEnd, Router, RouterModule } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { NavbarItemsEnum } from '../../navbar/navbar-items.enum';
 import { IconModule } from '../icon/icon.module';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'agro-navbar',
@@ -27,7 +27,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   private subscriptions = new Subscription();
 
   constructor(
-    private activatedRoute: ActivatedRoute
+    private route: Router
   ) { }
 
   ngOnInit(): void {
@@ -35,11 +35,11 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
   
   private subscribeRoute(): void {
-    this.subscriptions.add(this.activatedRoute.root.data.subscribe(
-      data => {
-        debugger;
-        this.current = data['current']}
-    ));
+    this.route.events.subscribe(event => {
+      if (event instanceof ActivationEnd) {
+        this.current = event.snapshot.data['current'];
+      }
+    });
   }
 
   ngOnDestroy(): void {
