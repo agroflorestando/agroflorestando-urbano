@@ -1,6 +1,6 @@
 @mixin brutal-border {
-  border: 3px solid black;
-  box-shadow: 5px 5px black;
+  border: 3px solid var(--contrast);
+  box-shadow: 5px 5px var(--contrast);
 }
 
 @mixin brutal-radius {

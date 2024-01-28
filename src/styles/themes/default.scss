@@ -1,13 +1,16 @@
 body[data-theme="default"] {
   --base: #BAFCA2;
-  --baseContrast: rgb(15, 20, 25);
-  --baseText: var(--baseContrast);
+  --contrast: rgb(15, 20, 25);
+  --baseText: var(--contrast);
+
+  --baseSecondary: white;
+  --baseSecondaryText: black;
 
   --primary: #7FBC8C;
   --primaryContrast: black;
   
   --secondary: #F4D738;
-  --secondaryContrast: var(primaryContrast);
+  --secondaryContrast: var(--primaryContrast);
 
   --danger: #FFA07A;
 }

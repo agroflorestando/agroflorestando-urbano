@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TablerIconsModule } from 'angular-tabler-icons';
 import { IconTrees, IconMapSearch, IconQrcode, IconSettings, IconLockSquareRoundedFilled } from 'angular-tabler-icons/icons';
 import { NavbarComponent } from './navbar.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { NavbarComponent } from './navbar.component';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     TablerIconsModule.pick({
       IconTrees,
       IconMapSearch,

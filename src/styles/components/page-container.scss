@@ -1,0 +1,6 @@
+.agro-page-container {
+  @include brutal;
+
+  height: calc(100vh - 195px);
+  background-color: var(--baseSecondary);
+}
