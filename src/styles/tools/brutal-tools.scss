@@ -3,8 +3,18 @@
   box-shadow: 5px 5px var(--contrast);
 }
 
+@mixin thin-brutal-border {
+  border: 2px solid var(--contrast);
+  box-shadow: 3px 3px var(--contrast);
+}
+
 @mixin brutal-radius {
   border-radius: 20px;
+  box-sizing: border-box;
+}
+
+@mixin brutal-rounded {
+  border-radius: 50%;
   box-sizing: border-box;
 }
 
@@ -12,3 +22,4 @@
   @include brutal-border;
   @include brutal-radius;
 }
+

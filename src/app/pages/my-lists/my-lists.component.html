@@ -1,12 +1,16 @@
 <section class="agro-page-container">
   <ul class="agro-list">
     <li *ngFor="let list of lists">
-      <section class="agro-treelist-item">
+      <article class="agro-treelist-item">
         <div class="agro-treelist-item-icon">{{list.icon}}</div>
         <div class="agro-treelist-item-info">
           <h3>{{list.title}}</h3>
-          <span>{{list.description}}</span>
-          <span>criador por {{list.author}}</span>
+          <span class="agro-treelist-item-info-description">
+            {{list.description}}
+          </span>
+          <span class="agro-treelist-item-info-author">
+            criador por {{list.author}}
+          </span>
         </div>
         <nav class="agro-treelist-item-navigation">
           <button type="button" class="agro-button agro-button-icon">
@@ -16,7 +20,7 @@
             <i-tabler name="caret-right"></i-tabler>
           </button>
         </nav>
-      </section>
+      </article>
     </li>
   </ul>
 </section>
