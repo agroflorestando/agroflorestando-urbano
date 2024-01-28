@@ -11,9 +11,9 @@ button.agro-button-icon {
   display: flex;
   position: relative;
   outline: none;
-
   align-items: center;
   justify-content: center;
+  background-color: var(--baseSecondaryDarker);
 
   &:active {
     @include brutal-border-thin-active;
