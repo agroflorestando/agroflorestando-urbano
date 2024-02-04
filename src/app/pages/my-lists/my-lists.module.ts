@@ -1,9 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MyListsComponent } from './my-lists.component';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { IconCaretRight, IconLock, IconWorld } from 'angular-tabler-icons/icons';
-import { TablerIconsModule } from 'angular-tabler-icons';
+import { MyListsComponent } from './my-lists.component';
 import { myListsRoutes } from './my-lists.routes';
 
 @NgModule({

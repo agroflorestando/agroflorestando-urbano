@@ -15,15 +15,11 @@
           </span>
         </div>
         <nav class="agro-treelist-item-navigation">
-          <button *ngIf="list.public" type="button" class="agro-button agro-button-icon">
-            <i-tabler name="world"></i-tabler>
-            <span class="agro-notification">{{list.notifications}}</span>
-          </button>
-          <button *ngIf="!list.public" type="button" class="agro-button agro-button-icon">
-            <i-tabler name="lock"></i-tabler>
-          </button>
           <button type="button" class="agro-button agro-button-icon">
             <i-tabler name="caret-right"></i-tabler>
+            <span *ngIf="list.public" class="agro-notification">
+              {{list.notifications}}
+            </span>
           </button>
         </nav>
       </article>
@@ -32,5 +28,5 @@
 </section>
 
 <button class="agro-main-button" type="button">
-  <i-tabler name="plus"></i-tabler>
+  <i-tabler [routerLink]="['/my', 'lists', 'new']" name="plus"></i-tabler>
 </button>

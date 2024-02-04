@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListsListComponent } from './lists-list.component';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TablerIconsModule } from 'angular-tabler-icons';
-import { IconCaretRight, IconLock, IconPlus, IconWorld } from 'angular-tabler-icons/icons';
+import { IconCaretRight, IconLock, IconPlus } from 'angular-tabler-icons/icons';
+import { ListsListComponent } from './lists-list.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,6 @@ import { IconCaretRight, IconLock, IconPlus, IconWorld } from 'angular-tabler-ic
     CommonModule,
     TablerIconsModule.pick({
       IconCaretRight,
-      IconWorld,
       IconLock,
       IconPlus
     }),
