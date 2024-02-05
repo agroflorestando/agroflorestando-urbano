@@ -19,6 +19,14 @@ export const routes: Routes = [
   },
 
   {
+    path: 'auth',
+    data: {
+      current: NavbarItemsEnum.AUTHENTICATE
+    },
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+  },
+
+  {
     path: 'camera',
     data: {
       current: NavbarItemsEnum.CAMERA
