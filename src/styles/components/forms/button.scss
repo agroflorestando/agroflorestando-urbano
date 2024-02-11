@@ -1,0 +1,16 @@
+button.agro-button {
+  @include brutal-border-thin;
+  @include brutal-radius;
+
+  padding: .5rem 1rem;
+  box-sizing: border-box;
+  background-color: var(--primary);
+
+  &:active {
+    @include brutal-border-thin-active;
+  }
+
+  &.agro-secondary {
+    background-color: var(--secondary);
+  }
+}

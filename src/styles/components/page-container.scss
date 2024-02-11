@@ -1,7 +1,12 @@
 .agro-page-container {
   @include brutal;
 
+  position: relative;
+
   height: calc(100vh - 195px);
   background-color: var(--baseSecondary);
   overflow: auto;
+
+  padding: 1rem;
+  box-sizing: border-box;
 }

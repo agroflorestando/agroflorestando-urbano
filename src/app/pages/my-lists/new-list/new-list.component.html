@@ -1,26 +1,38 @@
 <section class="agro-page-container">
   <h2>Criar nova lista</h2>
-  <form>
-    <div>
+  <form id="new-list-form" novalidate autocomplete="off">
+    <div class="agro-field-container">
       <label for="new-list-icone">Icone:</label>
       <input id="new-list-icone" type="text" />
     </div>
   
-    <div>
+    <div class="agro-field-container">
       <label for="new-list-name-list">Nome da lista:</label>
       <input id="new-list-name-list" type="text" />
     </div>
   
-    <div>
+    <div class="agro-field-container">
       <label for="new-list-description">Descrição:</label>
       <textarea id="new-list-description"></textarea>
     </div>
   
-    <div>
+    <div class="agro-field-container">
       <label for="new-list-tags">Tags (i):</label>
       <input id="new-list-tags" type="text" />
     </div>
   </form>
 
-  <button type="button">Salvar</button>
+  <div class="agro-button-group agro-fixed-bottom">
+    <button 
+      [routerLink]="['/my', 'lists']"
+      class="agro-button agro-secondary" 
+      type="button" 
+    >Voltar</button>
+    
+    <button
+      class="agro-button"
+      form="new-list-form"
+      type="submit"
+    >Salvar</button>
+  </div>
 </section>
