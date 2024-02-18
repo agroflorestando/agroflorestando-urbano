@@ -4,6 +4,7 @@
     <div class="agro-field-container">
       <label for="new-list-icone">Icone:</label>
       <input id="new-list-icone" type="text" />
+      <emoji-mart (emojiClick)="addEmoji($event)" [style]="{ position: 'relative', 'z-index': '20' }"></emoji-mart>
     </div>
   
     <div class="agro-field-container">

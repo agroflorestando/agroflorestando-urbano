@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NewListComponent } from './new-list.component';
 import { RouterModule } from '@angular/router';
+import { PickerComponent } from '@ctrl/ngx-emoji-mart';
 
 @NgModule({
   declarations: [
@@ -9,6 +10,7 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
+    PickerComponent,
     RouterModule.forChild([
       {
         path: '',

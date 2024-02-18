@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './new-list.component.scss'
 })
 export class NewListComponent {
-
+  addEmoji(event: Event): void {
+    console.info(event);
+  }
 }
