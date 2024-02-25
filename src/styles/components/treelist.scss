@@ -1,0 +1,44 @@
+.agro-treelist-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  
+  &-icon {
+    border-radius: 50%;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: .5rem;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+  }
+
+  &-info {
+    flex: 1 1 0;
+    overflow: hidden;
+
+    h3 {
+      margin: 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    &-description {
+      display: block;
+      margin: .25rem 0;
+      font-size: 14px;
+    }
+  }
+
+  &-navigation {
+    display: flex;
+  }
+}
+
+.agro-info-author {
+  display: block;
+  font-size: 11px;
+}

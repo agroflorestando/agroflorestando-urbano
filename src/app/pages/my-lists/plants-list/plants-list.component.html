@@ -1,19 +1,18 @@
 <section class="agro-page-container">
-  <article class="agro-plantlist-item">
-    <div class="agro-plantlist-icon">
+  <article class="agro-treelist-item">
+    <div class="agro-treelist-item-icon">
       {{list.icon}}
     </div>
-    <div class="agro-plantlist-info">
+    <div class="agro-treelist-item-info">
       <h3>{{list.title}}</h3>
-      <span class="agro-plantlist-info-description">
+      <span class="agro-treelist-item-info-description">
         {{list.description}}
       </span>
-      <span class="agro-plantlist-info-author">
+      <span class="agro-info-author">
         criado por {{list.author}}
       </span>
     </div>
   </article>
-
 
   <ul class="agro-list">
     <li class="agro-listed-plant" *ngFor="let plant of plants">
@@ -27,9 +26,10 @@
 
           <address>{{plant.article.quotes}}</address>
         </blockquote>
-        <span class="agro-listed-plant-info-author">
-          criado por {{plant.author}}
+        <span class="agro-info-author">
+          planta cadastrada por {{plant.author}}
         </span>
+        <button class="agro-button" type="button">Abrir</button>
       </div>
     </li>
   </ul>

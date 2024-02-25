@@ -10,12 +10,16 @@
           <span class="agro-treelist-item-info-description">
             {{list.description}}
           </span>
-          <span class="agro-treelist-item-info-author">
+          <span class="agro-info-author">
             criado por {{list.author}}
           </span>
         </div>
         <nav class="agro-treelist-item-navigation">
-          <button type="button" class="agro-button-icon">
+          <button
+            type="button"
+            [routerLink]="['/my', 'lists', 1]"
+            class="agro-button-icon"
+          >
             <i-tabler name="caret-right"></i-tabler>
             <span *ngIf="list.public" class="agro-notification">
               {{list.notifications}}

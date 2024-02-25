@@ -1,3 +1,10 @@
+// FIXME: criar um path padrão
+@import '../../../../styles/tools/bottom-bordered';
+
+.agro-treelist-item {
+  @include bottom-bordered;
+}
+
 .agro-button-icon {
   margin-right: .5rem;
 }
@@ -8,7 +15,7 @@
   width: 100%;
 
   &-info {
-    flex: 1 1 0px;
+    flex: 1 1 0;
     overflow: hidden;
 
     h3 {
@@ -23,11 +30,6 @@
       margin: .25rem 0;
       font-size: 14px;
     }
-
-    &-author {
-      display: block;
-      font-size: 11px;
-    }
   }
 
   &-navigation {
@@ -36,17 +38,29 @@
 }
 
 .agro-listed-plant {
-  &-image {
-
-  }
+  display: flex;
+  align-items: flex-start;
 
   &-info {
-    &-description {
+    margin: 0 1rem;
 
+    h3 {
+      margin: 0 0 1rem 0;
     }
 
-    &-author {
+    &-description {
+      margin: 0;
+      text-align: justify;
 
+      > address {
+        text-align: right;
+        margin: 1rem 0;
+      }
+    }
+
+    > .agro-button {
+      margin: 1rem 0;
+      float: right;
     }
   }
 }

@@ -4,6 +4,7 @@
 //  tools
 @import 'styles/tools/brutal-tools';
 @import 'styles/tools/reset-list';
+@import 'styles/tools/bottom-bordered';
 
 //  reset
 @import 'styles/elements/body';
@@ -17,6 +18,8 @@
 @import 'styles/components/list';
 @import 'styles/components/notifications';
 @import 'styles/components/fixed-bottom';
+
+@import 'styles/components/treelist';
 
 //  forms components
 @import 'styles/components/forms/field-container';

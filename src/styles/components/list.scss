@@ -5,7 +5,7 @@ ul.agro-list {
   flex-direction: column;
 
   li {
-    padding: .5rem;
-    border-bottom: 1px solid var(--contrast);
+    @include bottom-bordered;
+    position: relative;
   }
 }
