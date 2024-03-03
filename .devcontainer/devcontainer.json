@@ -10,7 +10,6 @@
 			"extensions": [
         "ms-vscode.vscode-typescript-next",
         "eamodio.gitlens",
-        "ms-azuretools.vscode-docker",
         "wix.vscode-import-cost",
         "keatsdothu.summer-nights-lullaby",
         "ctcuff.font-preview"

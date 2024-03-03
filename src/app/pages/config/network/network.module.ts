@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { AuthRoutingModule } from './auth-routing.module';
+import { NetworkComponent } from './network.component';
 import { TablerIconsModule } from 'angular-tabler-icons';
-import { IconCaretRight } from 'angular-tabler-icons/icons';
-
+import { IconX } from 'angular-tabler-icons/icons';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    NetworkComponent
+  ],
   imports: [
     CommonModule,
-    AuthRoutingModule,
     TablerIconsModule.pick({
-      IconCaretRight
+      IconX
     })
+  ],
+  exports: [
+    NetworkComponent
   ]
 })
-export class AuthModule { }
+export class NetworkModule { }

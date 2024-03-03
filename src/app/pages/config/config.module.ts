@@ -4,6 +4,8 @@ import { ConfigComponent } from './config.component';
 import { RouterModule } from '@angular/router';
 import { TablerIconsModule } from 'angular-tabler-icons';
 import { IconCaretRight } from 'angular-tabler-icons/icons';
+import { configRoutes } from './config.routes';
+import { NetworkModule } from './network/network.module';
 
 @NgModule({
   declarations: [
@@ -11,15 +13,11 @@ import { IconCaretRight } from 'angular-tabler-icons/icons';
   ],
   imports: [
     CommonModule,
+    NetworkModule,
     TablerIconsModule.pick({
       IconCaretRight
     }),
-    RouterModule.forChild([
-      {
-        path: '',
-        component: ConfigComponent
-      }
-    ])
+    RouterModule.forChild(configRoutes)
   ]
 })
 export class ConfigModule { }
