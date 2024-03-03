@@ -1,29 +1,8 @@
 <section class="agro-page-container agro-bg-primary">
   <nav>
     <ul class="agro-list agro-bg-secondary">
-      <li>
-        wss://relay.com
-        <button type="button" class="agro-button-icon agro-bg-danger">
-          <i-tabler name="x"></i-tabler>
-        </button>
-      </li>
-
-      <li>
-        wss://relay.com
-        <button type="button" class="agro-button-icon agro-bg-danger">
-          <i-tabler name="x"></i-tabler>
-        </button>
-      </li>
-
-      <li>
-        wss://relay.com
-        <button type="button" class="agro-button-icon agro-bg-danger">
-          <i-tabler name="x"></i-tabler>
-        </button>
-      </li>
-
-      <li>
-        wss://relay.com
+      <li *ngFor="let relay of relays">
+        {{relay}}
         <button type="button" class="agro-button-icon agro-bg-danger">
           <i-tabler name="x"></i-tabler>
         </button>

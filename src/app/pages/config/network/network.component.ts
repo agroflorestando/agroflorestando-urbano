@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './network.component.scss'
 })
 export class NetworkComponent {
-
+  relays: string[] = [
+    'wss://relay.com',
+    'wss://relay.com',
+    'wss://relay.com',
+    'wss://relay.com',
+    'wss://relay.com'
+  ];
 }
