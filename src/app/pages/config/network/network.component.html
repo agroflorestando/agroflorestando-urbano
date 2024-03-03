@@ -1,11 +1,30 @@
-<section class="agro-page-container">
-  <h2>Rede</h2>
-
+<section class="agro-page-container agro-bg-primary">
   <nav>
-    <ul class="agro-list">
+    <ul class="agro-list agro-bg-secondary">
       <li>
         wss://relay.com
-        <button type="button" class="agro-button-icon">
+        <button type="button" class="agro-button-icon agro-bg-danger">
+          <i-tabler name="x"></i-tabler>
+        </button>
+      </li>
+
+      <li>
+        wss://relay.com
+        <button type="button" class="agro-button-icon agro-bg-danger">
+          <i-tabler name="x"></i-tabler>
+        </button>
+      </li>
+
+      <li>
+        wss://relay.com
+        <button type="button" class="agro-button-icon agro-bg-danger">
+          <i-tabler name="x"></i-tabler>
+        </button>
+      </li>
+
+      <li>
+        wss://relay.com
+        <button type="button" class="agro-button-icon agro-bg-danger">
           <i-tabler name="x"></i-tabler>
         </button>
       </li>
@@ -13,9 +32,12 @@
   </nav>
 
   <form id="network-form" novalidate autocomplete="off">
-    <div class="agro-field-container">
-      <label for="network-relay">Relay:</label>
+    <div class="agro-field-container add-relay">
+      <label for="network-relay">Incluir relay:</label>
       <input id="network-relay" placeholder="wss://relay.com" type="text" />
+      <button type="button" class="agro-button-icon">
+        <i-tabler name="world-plus"></i-tabler>
+      </button>
     </div>
   </form>
 </section>

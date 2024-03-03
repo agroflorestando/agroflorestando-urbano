@@ -1,4 +1,31 @@
-.agro-page-container {
-  background-color: var(--primary);
-  padding: 0;
+// FIXME: criar um path padrão
+@import '../../../../styles/tools/reset-list';
+@import '../../../../styles/tools/brutal-tools';
+
+ul.agro-list {
+  @include reset-list;
+  @include brutal-border-thin;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    padding-left: 1.5rem;
+  }
+}
+
+.add-relay {
+  position: relative;
+
+  > input {
+    height: 50px;
+  }
+
+  > button {
+    float: right;
+    position: absolute;
+    right: 1rem;
+    bottom: 10px;
+  }
 }
