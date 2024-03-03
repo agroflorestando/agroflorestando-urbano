@@ -1,4 +1,4 @@
-import{b as e,c as d,d as w,e as M,f as g,h as c,j as v,k as r,s as i,t as x}from"./chunk-JQ5II75R.js";import{a as p}from"./chunk-POLL2CVR.js";var m=["*"],l=class{constructor(h){this.options=h}};function z(t){return t.toLowerCase().replace(/(?:^\w|[A-Z]|\b\w)/g,h=>h.toUpperCase()).replace(/[-_]/g,"")}var S=(()=>{class t{constructor(a,o,n){this.elem=a,this.changeDetector=o,this.options=n}ngOnChanges(a){let n=Object.assign({},...this.options.map(s=>s.icons))[`Icon${z(a.name.currentValue)}`]??"";!n&&!this.options.some(s=>s.ignoreWarnings)&&console.warn(`Tabler Icon not found: ${a.name.currentValue}
+import{C as c,F as v,G as r,Y as i,Z as x,l as e,n as d,q as w,r as M,t as g}from"./chunk-J6C6ON7E.js";import{a as p}from"./chunk-POLL2CVR.js";var m=["*"],l=class{constructor(h){this.options=h}};function z(t){return t.toLowerCase().replace(/(?:^\w|[A-Z]|\b\w)/g,h=>h.toUpperCase()).replace(/[-_]/g,"")}var S=(()=>{class t{constructor(a,o,n){this.elem=a,this.changeDetector=o,this.options=n}ngOnChanges(a){let n=Object.assign({},...this.options.map(s=>s.icons))[`Icon${z(a.name.currentValue)}`]??"";!n&&!this.options.some(s=>s.ignoreWarnings)&&console.warn(`Tabler Icon not found: ${a.name.currentValue}
 Refer to documentation on https://github.com/pierreavn/angular-tabler-icons`),this.elem.nativeElement.innerHTML=n,this.changeDetector.markForCheck()}}return t.\u0275fac=function(a){return new(a||t)(v(c),v(r),v(l))},t.\u0275cmp=w({type:t,selectors:[["i-tabler"],["tabler-icon"]],inputs:{name:"name"},features:[g],ngContentSelectors:m,decls:1,vars:0,template:function(a,o){a&1&&(i(),x(0))},styles:["[_nghost-%COMP%]{display:inline-block;width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2px;stroke-linecap:round;stroke-linejoin:round}"]}),t})(),F=(()=>{class t{constructor(a){if(this.options=a,!this.options)throw new Error(`No icon provided. Make sure to use 'TablerIconsModule.pick({ ... })' when importing the module
 Refer to documentation on https://github.com/pierreavn/angular-tabler-icons`)}static pick(a,o){return{ngModule:t,providers:[{provide:l,useValue:p({icons:a},o),multi:!0}]}}}return t.\u0275fac=function(a){return new(a||t)(d(l,8))},t.\u0275mod=M({type:t}),t.\u0275inj=e({}),t})();var A=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -74,6 +74,18 @@ Refer to documentation on https://github.com/pierreavn/angular-tabler-icons`)}st
 
 `;var N=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20.985 12.518a9 9 0 1 0 -8.45 8.466" />
+  <path d="M3.6 9h16.8" />
+  <path d="M3.6 15h11.4" />
+  <path d="M11.5 3a17 17 0 0 0 0 18" />
+  <path d="M12.5 3a16.998 16.998 0 0 1 2.283 12.157" />
+  <path d="M16 19h6" />
+  <path d="M19 16v6" />
+</svg>
+
+
+`;var E=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
   <path d="M3.6 9h16.8" />
   <path d="M3.6 15h16.8" />
@@ -82,4 +94,11 @@ Refer to documentation on https://github.com/pierreavn/angular-tabler-icons`)}st
 </svg>
 
 
-`;export{S as a,F as b,A as c,O as d,L as e,y as f,b as g,R as h,T as i,q as j,N as k};
+`;var U=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M18 6l-12 12" />
+  <path d="M6 6l12 12" />
+</svg>
+
+
+`;export{S as a,F as b,A as c,O as d,L as e,y as f,b as g,R as h,T as i,q as j,N as k,E as l,U as m};
