@@ -13,7 +13,7 @@ import { IconCaretRight } from 'angular-tabler-icons/icons';
     AuthRoutingModule,
     TablerIconsModule.pick({
       IconCaretRight
-    }),
+    })
   ]
 })
 export class AuthModule { }

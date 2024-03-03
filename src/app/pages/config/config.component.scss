@@ -3,22 +3,19 @@
 @import '../../../styles/tools/brutal-tools';
 
 .agro-page-container {
-  background-color: var(--primary);
+  padding: 0;
 
-  > nav {
-    ul {
-      @include reset-list;
-      border-bottom: $brutalBorderThinSize solid;
-      background-color: var(--baseSecondary);
-  
-      li {
-        display: flex;
-        justify-content: space-between;
-        box-sizing: border-box;
-        align-items: center;
-        padding-left: 1.5rem;
-      }
+  ul.agro-list {
+    @include reset-list;
+    border-bottom: $brutalBorderThinSize solid;
+    background-color: var(--baseSecondary);
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      box-sizing: border-box;
+      align-items: center;
+      padding-left: 1.5rem;
     }
   }
 }
-

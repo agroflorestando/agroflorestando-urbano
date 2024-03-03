@@ -13,5 +13,21 @@ body[data-theme="default"] {
   --secondary: #F4D738;
   --secondaryContrast: var(--primaryContrast);
 
-  --danger: #FFA07A;
+  --danger: #FF7423;
+}
+
+.agro-bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.agro-bg-secondary {
+  background-color: var(--secondary) !important;
+}
+
+.agro-bg-danger {
+  background-color: var(--danger) !important;
+}
+
+.agro-text-secondary {
+  color: var(--baseText) !important;
 }
