@@ -19,12 +19,11 @@
     <li routerLink="/auth">
       <i-tabler
         name="lock-square-rounded-filled"
-        [class.is-active]="current === CONTEXT_AUTHENTICATE"
       ></i-tabler>
       <span>Autenticar</span>
     </li>
 
-    <li routerLink="/camera">
+    <li (click)="openAuthenticationModal()" routerLink="/camera">
       <i-tabler
         name="qrcode"
         [class.is-active]="current === CONTEXT_CAMERA"

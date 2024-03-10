@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRouteSnapshot, ActivationEnd, Router, RouterModule } from '@angular/router';
+import { ActivationEnd, Router, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { NavbarItemsEnum } from '../../navbar/navbar-items.enum';
 import { IconModule } from '../icon/icon.module';
@@ -18,7 +18,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   readonly CONTEXT_MY_PLANTS = NavbarItemsEnum.MY_PLANTS;
   readonly CONTEXT_SEARCH = NavbarItemsEnum.SEARCH;
-  readonly CONTEXT_AUTHENTICATE = NavbarItemsEnum.AUTHENTICATE;
   readonly CONTEXT_CAMERA = NavbarItemsEnum.CAMERA;
   readonly CONTEXT_CONFIG = NavbarItemsEnum.CONFIG;
 
@@ -40,6 +39,10 @@ export class NavbarComponent implements OnInit, OnDestroy {
         this.current = event.snapshot.data['current'];
       }
     });
+  }
+
+  openAuthenticationModal(): void {
+    
   }
 
   ngOnDestroy(): void {
