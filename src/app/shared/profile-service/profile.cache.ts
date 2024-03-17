@@ -1,10 +1,8 @@
-import { Injectable } from "@angular/core";
-import { NostrEventKind } from "@domain/nostr-event-kind.enum";
+import { Injectable } from '@angular/core';
+import { DataLoadType } from '@domain/data-load.type';
+import { IProfile } from '@domain/profile.interface';
 import { Event } from 'nostr-tools';
-import { ProfileConverter } from "./profile.converter";
-import { IProfile } from "@domain/profile.interface";
-import { TNostrPublic } from "@domain/nostr-public.type";
-import { DataLoadType } from "@domain/data-load.type";
+import { ProfileConverter } from './profile.converter';
 
 @Injectable()
 export class ProfileCache {
@@ -12,7 +10,7 @@ export class ProfileCache {
   static instance: ProfileCache | null = null;
 
   static profiles: {
-    [npub: TNostrPublic]: IProfile
+    [npub: string]: IProfile
   } = {};
 
   constructor(
@@ -52,17 +50,18 @@ export class ProfileCache {
     return ProfileCache.profiles[npub] = this.profileConverter.getMetadataFromNostrPublic(npub);
   }
 
-  cache(profiles: Event<NostrEventKind>[]): void;
+  cache(profiles: Event[]): void;
   cache(profiles: IProfile[]): void;
-  cache(profiles: IProfile[] | Event<NostrEventKind>[]): void;
-  cache(profiles: IProfile[] | Event<NostrEventKind>[]): void {
-    const profileList = (profiles as (IProfile | Event<NostrEventKind>)[]);
+  cache(profiles: IProfile[] | Event[]): void;
+  cache(profiles: IProfile[] | Event[]): void {
+    const NostrEventKindMetadata = 0;
+    const profileList = (profiles as (IProfile | Event)[]);
     profileList
-      .filter((profile) => !('sig' in profile && profile.kind !== NostrEventKind.Metadata))
+      .filter((profile) => !('sig' in profile && profile.kind !== NostrEventKindMetadata))
       .forEach(profile => this.cacheProfile(profile));
   }
 
-  private cacheProfile(profile: IProfile | Event<NostrEventKind>): IProfile {
+  private cacheProfile(profile: IProfile | Event): IProfile {
     if ('sig' in profile) {
       profile = this.profileConverter.convertEventToProfile(profile);
     }

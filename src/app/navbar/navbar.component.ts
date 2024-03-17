@@ -1,8 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivationEnd, Router, RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { NavbarItemsEnum } from '../../navbar/navbar-items.enum';
-import { IconModule } from '../icon/icon.module';
+import { NavbarItemsEnum } from './navbar-items.enum';
+import { IconModule } from '../shared/icon/icon.module';
+import { AuthModalComponent } from '@shared/auth-modal/auth-modal.component';
+import { ModalService } from '@belomonte/async-modal-ngx';
 
 @Component({
   selector: 'agro-navbar',
@@ -26,7 +28,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
   private subscriptions = new Subscription();
 
   constructor(
-    private route: Router
+    private route: Router,
+    private modalService: ModalService
   ) { }
 
   ngOnInit(): void {
@@ -42,7 +45,13 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   openAuthenticationModal(): void {
-    
+    this.modalService
+    .createModal(AuthModalComponent)
+    .setData({
+      title: 'Accounts',
+      currentStep: 'select-account'
+    })
+    .build();
   }
 
   ngOnDestroy(): void {

@@ -1,4 +1,5 @@
 import { getPublicKey, nip19 } from 'nostr-tools';
+import { hexToBytes } from '@noble/ciphers/utils';
 
 export class NostrUser {
 
@@ -32,7 +33,7 @@ export class NostrUser {
     if (type === 'nsec') {
       this.nostrSecret = nostrString;
       this.privateKeyHex = data.toString();
-      this.publicKeyHex = getPublicKey(this.privateKeyHex);
+      this.publicKeyHex = getPublicKey(hexToBytes(this.privateKeyHex));
       this.nostrPublic = nip19.npubEncode(this.publicKeyHex);
     } else if (type === 'npub') {
       this.nostrPublic = nostrString;

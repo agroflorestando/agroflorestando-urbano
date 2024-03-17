@@ -1,13 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CameraObservable } from './camera.observable';
 
 @NgModule({
+  declarations: [],
   imports: [
     CommonModule
-  ],
-  providers: [
-    CameraObservable
   ]
 })
-export class CameraServiceModule { }
+export class ApiServiceModule { }

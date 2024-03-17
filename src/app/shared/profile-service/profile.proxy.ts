@@ -1,24 +1,11 @@
-import { Injectable } from "@angular/core";
-import { IProfile } from "../../domain/profile.interface";
-import { ProfileConverter } from "./profile.converter";
-import { ProfileCache } from "./profile.cache";
-import { ProfileApi } from "./profile.api";
+import { Injectable } from '@angular/core';
+import { IProfile } from '../../domain/profile.interface';
+import { ProfileConverter } from './profile.converter';
+import { ProfileCache } from './profile.cache';
+import { ProfileApi } from './profile.api';
 import { Event } from 'nostr-tools';
-import { NostrEventKind } from "@domain/nostr-event-kind.enum";
-import { DataLoadType } from "@domain/data-load.type";
-import { TNostrPublic } from "@domain/nostr-public.type";
+import { DataLoadType } from '@domain/data-load.type';
 
-/**
- * Orchestrate the interaction with the profile data,
- * check the cache, call the nostr api, cast the
- * resultset into domain object, cache it and return
- * 
- * There is a set of operations that must be done for
- * each nostr query precisely to reduce the need to repeat
- * queries, the complexity of this flow is abstracted
- * through this facade, which orchestrates services with
- * different responsibilities (cache, api, cast)
- */
 @Injectable()
 export class ProfileProxy {
 
@@ -36,9 +23,9 @@ export class ProfileProxy {
   }
 
   cache(profiles: IProfile[]): void;
-  cache(profiles: Event<NostrEventKind>[]): void;
-  cache(profiles: IProfile[] | Event<NostrEventKind>[]): void;
-  cache(profiles: IProfile[] | Event<NostrEventKind>[]): void {
+  cache(profiles: Event[]): void;
+  cache(profiles: IProfile[] | Event[]): void;
+  cache(profiles: IProfile[] | Event[]): void {
     this.profileCache.cache(profiles);
   }
 
@@ -61,7 +48,7 @@ export class ProfileProxy {
     return this.loadProfile(this.profileConverter.castPubkeyToNostrPublic(pubkey));
   }
 
-  async loadProfiles(...npubss: TNostrPublic[][]): Promise<IProfile[]> {
+  async loadProfiles(...npubss: string[][]): Promise<IProfile[]> {
     const npubs = [...new Set(npubss.flat(1))];
 
     const notLoaded = npubs.filter(npub => !this.profileCache.isEagerLoaded(npub))
@@ -74,7 +61,7 @@ export class ProfileProxy {
       .then(npubs => Promise.resolve(npubs[0]));
   }
   
-  private async forceProfileReload(npubs: Array<TNostrPublic>): Promise<Array<IProfile>> {
+  private async forceProfileReload(npubs: string[]): Promise<Array<IProfile>> {
     const events = await this.profileApi.loadProfiles(npubs);
     this.profileCache.cache(events);
     return Promise.resolve(npubs.map(npub => this.profileCache.get(npub)));

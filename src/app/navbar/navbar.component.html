@@ -16,14 +16,14 @@
       <span>Pesquisar</span>
     </li>
 
-    <li routerLink="/auth">
+    <li (click)="openAuthenticationModal()">
       <i-tabler
         name="lock-square-rounded-filled"
       ></i-tabler>
       <span>Autenticar</span>
     </li>
 
-    <li (click)="openAuthenticationModal()" routerLink="/camera">
+    <li routerLink="/camera">
       <i-tabler
         name="qrcode"
         [class.is-active]="current === CONTEXT_CAMERA"
