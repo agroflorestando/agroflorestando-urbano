@@ -48,16 +48,6 @@
         [class.has-value]="pin.value" [attr.readonly]="loading ? 'readonly' : null"
         [attr.type]="showPin ? 'text' : 'password'" />
 
-      <!-- TODO: incluir popover ao clique com explicação do porquê do pin -->
-      <button
-        type="button"
-        tabindex="6"
-        title="tap for information"
-        class="agro-button-icon second"
-      >
-        <i-tabler name="info-circle"></i-tabler>
-      </button>
-
       <button
         type="button"
         tabindex="7"
@@ -76,27 +66,27 @@
     </ng-container>
   </div>
 
-  <div class="button-group">
-    <button type="submit" tabindex="2" title="add account" class="button secondary iconed-button">
-      <div *ngIf="!loading" class="inline-icon icon-add">
-        <div role="img"></div>
-      </div>
+  <div class="agro-button-group">
+    <button
+      type="button"
+      tabindex="2"
+      title="back"
+      (click)="changeStep.next('select-account')"
+      class="agro-button agro-secondary">
+      <i-tabler name="caret-left"></i-tabler>
+
+      <span>
+        Back
+      </span>
+    </button>
+
+    <button type="submit" tabindex="3" title="add account" class="agro-button">
+      <i-tabler *ngIf="!loading" name="plus"></i-tabler>
 
       <agro-loading *ngIf="loading"></agro-loading>
 
       <span>
         Add account
-      </span>
-    </button>
-
-    <button *ngIf="accounts.length" type="button" tabindex="3" title="back" (click)="changeStep.next('select-account')"
-      class="button secondary iconed-button">
-      <div class="inline-icon icon-back">
-        <div role="img"></div>
-      </div>
-
-      <span>
-        Back
       </span>
     </button>
   </div>

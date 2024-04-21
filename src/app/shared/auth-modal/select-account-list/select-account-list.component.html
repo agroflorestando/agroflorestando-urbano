@@ -11,23 +11,47 @@
 
   <div class="space-between"></div>
 
-  <button (click)="logout(account)" title="logout" type="button" class="bordered icon-logout svg-button">
-    <div class="svg-wrapper">
-      <div alt="logout" role="img"></div>
-    </div>
+  <button
+    type="button"
+    title="logout"
+    (click)="logout(account)"
+    class="agro-button">
+    <i-tabler name="logout"></i-tabler>
+
+    <span>
+      Back
+    </span>
   </button>
 
-  <button (click)="selectAccount(account)" title="enter" type="button" class="bordered icon-enter svg-button">
-    <div class="svg-wrapper">
-      <div alt="enter" role="img"></div>
-    </div>
+  <button
+    type="button"
+    title="enter"
+    (click)="selectAccount(account)"
+    class="agro-button">
+    <i-tabler name="login"></i-tabler>
+
+    <span>
+      Back
+    </span>
   </button>
 </section>
 
-<button (click)="changeStep.next('add-account')" title="add account" type="button" class="add-account">
-  <div class="inline-icon icon-add">
-    <div alt="add account" role="img"></div>
-  </div>
+<section>
+  <i-tabler name="key"></i-tabler>
+  <span>From Signer</span>
+</section>
 
-  <span>Add Account</span>
-</button>
+<section>
+  <i-tabler name="scan"></i-tabler>
+  <span>Scan QRCode</span>
+</section>
+
+<section>
+  <i-tabler name="clipboard-text"></i-tabler>
+  <span>From Clipboard</span>
+</section>
+
+<section (click)="changeStep.next('write-nsec')">
+  <i-tabler name="forms"></i-tabler>
+  <span>Write Nostr Secret</span>
+</section>

@@ -1,6 +1,6 @@
 <agro-loading *ngIf="!currentStep"></agro-loading>
 <agro-add-account-form
-  *ngIf="currentStep === 'add-account'"
+  *ngIf="currentStep === 'write-nsec'"
   (selected)="authenticatingAccount = $event"
   (changeStep)="onChangeStep($event)"
   [accounts]="accounts"

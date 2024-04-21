@@ -24,7 +24,7 @@ export class AuthModalComponent
   accounts: IUnauthenticatedUser[] = [];
   
   authenticatingAccount: IUnauthenticatedUser | null = null;
-  currentStep: AuthModalSteps | null = null;
+  currentStep: AuthModalSteps = 'select-account';
 
   constructor(
     private nostrSecretStatefull: NostrSecretStatefull
@@ -34,7 +34,6 @@ export class AuthModalComponent
 
   ngOnInit(): void {
     this.bindAccountsSubscription();
-    this.setInitialScreen();
   }
 
   private bindAccountsSubscription(): void {
@@ -47,12 +46,6 @@ export class AuthModalComponent
     // let a tick to the screen click effect
     // eslint-disable-next-line ban/ban
     setTimeout(() => this.currentStep = step);
-  }
-
-  private setInitialScreen(): void {
-    if (!this.currentStep) {
-      this.currentStep = this.accounts.length ? 'select-account' : 'add-account';
-    }
   }
 
   ngOnDestroy(): void {

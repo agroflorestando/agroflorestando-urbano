@@ -9,7 +9,7 @@ import { AuthenticateFormComponent } from './authenticate-form/authenticate-form
 import { SelectAccountListComponent } from './select-account-list/select-account-list.component';
 import { ProfileServiceModule } from '@shared/profile-service/profile-service.module';
 import { TablerIconsModule } from 'angular-tabler-icons';
-import { IconEye, IconEyeOff, IconInfoCircle, IconScan } from 'angular-tabler-icons/icons';
+import { IconCaretLeft, IconClipboardText, IconEye, IconEyeOff, IconForms, IconInfoCircle, IconKey, IconLogin, IconLogout, IconPlus, IconScan } from 'angular-tabler-icons/icons';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,14 @@ import { IconEye, IconEyeOff, IconInfoCircle, IconScan } from 'angular-tabler-ic
       IconEye,
       IconEyeOff,
       IconInfoCircle,
-      IconScan
+      IconLogin,
+      IconLogout,
+      IconKey,
+      IconScan,
+      IconClipboardText,
+      IconForms,
+      IconPlus,
+      IconCaretLeft
     })
   ],
   exports: [

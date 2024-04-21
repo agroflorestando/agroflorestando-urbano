@@ -2,3 +2,12 @@
 agro-loading {
   margin-right: 1rem;
 }
+
+button.agro-button-icon.second:active {
+  top: calc(-2.5rem + 3px) !important;
+  left: calc(-3.5rem + 3px) !important;
+}
+
+.agro-button-group {
+  margin-top: 2rem;
+}

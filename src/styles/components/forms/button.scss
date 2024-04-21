@@ -5,6 +5,8 @@ button.agro-button {
   cursor: pointer;
   padding: .5rem 1rem;
   background-color: var(--primary);
+  align-items: center;
+  display: flex;
 
   &:active {
     @include brutal-border-thin-active;

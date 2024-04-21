@@ -48,7 +48,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
     firstValueFrom(this.modalService
       .createModal(AuthModalComponent)
       .setData({
-        title: 'Accounts'
+        title: 'Accounts',
+        currentStep: 'select-account'
       })
       .build())
       .then(() => { debugger; })

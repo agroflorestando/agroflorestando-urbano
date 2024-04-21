@@ -1,1 +1,1 @@
-export type AuthModalSteps = 'add-account' | 'select-account' | 'authenticate';
+export type AuthModalSteps = 'write-nsec' | 'select-account' | 'authenticate';

@@ -31,7 +31,7 @@ export class SelectAccountListComponent {
     // eslint-disable-next-line ban/ban
     setTimeout(() => {
       if (!this.accounts.length) {
-        this.changeStep.next('add-account');
+        this.changeStep.next('write-nsec');
       }
     });
   }
