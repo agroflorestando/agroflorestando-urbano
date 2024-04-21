@@ -16,10 +16,9 @@
       <span>Pesquisar</span>
     </li>
 
-    <li routerLink="/auth">
+    <li (click)="openAuthenticationModal()">
       <i-tabler
         name="lock-square-rounded-filled"
-        [class.is-active]="current === CONTEXT_AUTHENTICATE"
       ></i-tabler>
       <span>Autenticar</span>
     </li>

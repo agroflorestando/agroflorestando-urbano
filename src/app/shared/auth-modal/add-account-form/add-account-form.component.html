@@ -1,0 +1,93 @@
+<h2>Add account</h2>
+<form [formGroup]="accountForm" (submit)="onAddAccountSubmit($event)" novalidate autocomplete="off">
+  <div [class.error]="submitted && getFormControlErrors('nsec')">
+    <div class="agro-field-container larger">
+      <label for="addAccountNsecField">Nostr Secret (nsec)</label>
+
+      <input #nsec required name="nsec" tabindex="1" maxlength="64" formControlName="nsec" id="addAccountNsecField"
+        [class.has-value]="nsec.value" [attr.readonly]="loading ? 'readonly' : null"
+        [attr.type]="showNostrSecret ? 'text' : 'password'" />
+  
+      <button
+        type="button"
+        tabindex="4"
+        title="read nsec from qrcode"
+        class="agro-button-icon second"
+        (click)="readQrcodeUsingCamera(pin)"
+      >
+        <i-tabler name="scan"></i-tabler>
+      </button>
+  
+      <button
+        type="button"
+        tabindex="5"
+        [attr.title]="showNostrSecret ? 'hide nostr secret' : 'show nostr secret'"
+        (click)="showPin = !showPin"
+        class="agro-button-icon"
+      >
+        <i-tabler *ngIf="!showNostrSecret" name="eye"></i-tabler>
+        <i-tabler *ngIf="showNostrSecret" name="eye-off"></i-tabler>
+      </button>
+    </div>
+
+    <ng-container *ngIf="submitted">
+      <span *ngIf="getFormControlErrorStatus('nsec', 'required')" class="error">Nostr Secret cannot be blank</span>
+      <span *ngIf="getFormControlErrorStatus('nsec', 'invalidNostrPublicGivenInstead')" class="error">Nostr Public given
+        instead Nostr Secret</span>
+      <span *ngIf="getFormControlErrorStatus('nsec', 'invalidNostrSecret')" class="error">Invalid Nostr Secret</span>
+      <span *ngIf="getFormControlErrorStatus('nsec', 'nostrSecretNotFound')" class="error">Could not found this account
+        in current relay pool</span>
+    </ng-container>
+  </div>
+
+  <div [class.error]="submitted && getFormControlErrors('pin')">
+    <div class="agro-field-container larger">
+      <label for="addAccountPinField">Pin</label>
+      
+      <input #pin required name="pin" tabindex="2" [maxlength]="pinLength" formControlName="pin" id="addAccountPinField"
+        [class.has-value]="pin.value" [attr.readonly]="loading ? 'readonly' : null"
+        [attr.type]="showPin ? 'text' : 'password'" />
+
+      <button
+        type="button"
+        tabindex="7"
+        [attr.title]="showPin ? 'hide pin' : 'show pin'"
+        (click)="showPin = !showPin"
+        class="agro-button-icon"
+      >
+        <i-tabler *ngIf="!showPin" name="eye"></i-tabler>
+        <i-tabler *ngIf="showPin" name="eye-off"></i-tabler>
+      </button>
+    </div>
+
+    <ng-container *ngIf="submitted">
+      <span *ngIf="getFormControlErrorStatus('pin', 'required')" class="error">Include a Pin to improve your
+        privacity</span>
+    </ng-container>
+  </div>
+
+  <div class="agro-button-group">
+    <button
+      type="button"
+      tabindex="2"
+      title="back"
+      (click)="changeStep.next('select-account')"
+      class="agro-button agro-secondary">
+      <i-tabler name="caret-left"></i-tabler>
+
+      <span>
+        Back
+      </span>
+    </button>
+
+    <button type="submit" tabindex="3" title="add account" class="agro-button">
+      <i-tabler *ngIf="!loading" name="plus"></i-tabler>
+
+      <agro-loading *ngIf="loading"></agro-loading>
+
+      <span>
+        Add account
+      </span>
+    </button>
+  </div>
+</form>

@@ -1,0 +1,57 @@
+<h2>Select account</h2>
+<section *ngFor="let account of accounts" class="unauthenticated-account">
+  <agro-profile-picture [account]="account"></agro-profile-picture>
+  <div class="user-info">
+    <span class="user-name">
+      {{account.displayName}}
+      <span *ngIf="account.nip05valid" class="user-verified"></span>
+    </span>
+    <span *ngIf="account.nip05" class="user-nip5">{{account.nip05}}</span>
+  </div>
+
+  <div class="space-between"></div>
+
+  <button
+    type="button"
+    title="logout"
+    (click)="logout(account)"
+    class="agro-button">
+    <i-tabler name="logout"></i-tabler>
+
+    <span>
+      Back
+    </span>
+  </button>
+
+  <button
+    type="button"
+    title="enter"
+    (click)="selectAccount(account)"
+    class="agro-button">
+    <i-tabler name="login"></i-tabler>
+
+    <span>
+      Back
+    </span>
+  </button>
+</section>
+
+<section>
+  <i-tabler name="key"></i-tabler>
+  <span>From Signer</span>
+</section>
+
+<section>
+  <i-tabler name="scan"></i-tabler>
+  <span>Scan QRCode</span>
+</section>
+
+<section>
+  <i-tabler name="clipboard-text"></i-tabler>
+  <span>From Clipboard</span>
+</section>
+
+<section (click)="changeStep.next('write-nsec')">
+  <i-tabler name="forms"></i-tabler>
+  <span>Write Nostr Secret</span>
+</section>
