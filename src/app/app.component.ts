@@ -5,6 +5,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AsyncModalModule } from '@belomonte/async-modal-ngx';
 import { MainModalModule } from './shared/main-modal/main-modal.module';
 import { AuthModalModule } from '@shared/auth-modal/auth-modal.module';
+import { SecurityServiceModule } from '@shared/security-service/security-service.module';
 
 @Component({
   selector: 'agro-root',
@@ -14,7 +15,9 @@ import { AuthModalModule } from '@shared/auth-modal/auth-modal.module';
     HeaderComponent,
     NavbarComponent,
     MainModalModule,
-    AuthModalModule
+    AuthModalModule,
+    AsyncModalModule,
+    SecurityServiceModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

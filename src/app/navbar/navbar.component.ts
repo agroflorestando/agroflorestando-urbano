@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivationEnd, Router, RouterModule } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { firstValueFrom, Subscription } from 'rxjs';
 import { NavbarItemsEnum } from './navbar-items.enum';
 import { IconModule } from '../shared/icon/icon.module';
 import { AuthModalComponent } from '@shared/auth-modal/auth-modal.component';
@@ -45,13 +45,14 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   openAuthenticationModal(): void {
-    this.modalService
-    .createModal(AuthModalComponent)
-    .setData({
-      title: 'Accounts',
-      currentStep: 'select-account'
-    })
-    .build();
+    firstValueFrom(this.modalService
+      .createModal(AuthModalComponent)
+      .setData({
+        title: 'Accounts'
+      })
+      .build())
+      .then(() => { debugger; })
+      .catch(e => { debugger; });
   }
 
   ngOnDestroy(): void {

@@ -4,14 +4,14 @@ import { IUnauthenticatedUser } from '@shared/security-service/unauthenticated-u
 import { IProfile } from '@domain/profile.interface';
 import { nip19 } from 'nostr-tools';
 import { hexToBytes } from '@noble/ciphers/utils';
-const nip49 = require('nostr-tools/nip49');
+import * as nip49 from 'nostr-tools/nip49';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfileEncrypt {
 
-  encryptAccount(profile: IProfile, pin?: string): IUnauthenticatedUser | null {
+  encryptAccount(profile: IProfile, pin: string): IUnauthenticatedUser | null {
     const nostrSecret = profile.user.nostrSecret;
     const displayName = profile.display_name || profile.name;
     const picture = profile.picture || '/assets/default-profile.jpg';

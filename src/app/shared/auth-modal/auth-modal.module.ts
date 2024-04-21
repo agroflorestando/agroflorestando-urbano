@@ -7,6 +7,9 @@ import { AddAccountFormComponent } from './add-account-form/add-account-form.com
 import { AuthModalComponent } from './auth-modal.component';
 import { AuthenticateFormComponent } from './authenticate-form/authenticate-form.component';
 import { SelectAccountListComponent } from './select-account-list/select-account-list.component';
+import { ProfileServiceModule } from '@shared/profile-service/profile-service.module';
+import { TablerIconsModule } from 'angular-tabler-icons';
+import { IconEye, IconEyeOff, IconInfoCircle, IconScan } from 'angular-tabler-icons/icons';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,14 @@ import { SelectAccountListComponent } from './select-account-list/select-account
     CommonModule,
     ReactiveFormsModule,
     ProfileWidgetModule,
-    LoadingWidgetModule
+    LoadingWidgetModule,
+    ProfileServiceModule,
+    TablerIconsModule.pick({
+      IconEye,
+      IconEyeOff,
+      IconInfoCircle,
+      IconScan
+    })
   ],
   exports: [
     AuthModalComponent

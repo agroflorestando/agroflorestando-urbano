@@ -1,4 +1,9 @@
 div.agro-field-container {
+  position: relative;
+
+  &.larger > input {
+    height: 50px;
+  }
 
   > input,
   > textarea,
@@ -23,5 +28,16 @@ div.agro-field-container {
     font-weight: bold;
     display: block;
     margin: .75rem 0 .4rem;
-  }  
+  }
+
+  > button {
+    position: absolute;
+    float: right;
+    right: 1rem;
+    bottom: 10px;
+
+    &.second {
+      right: 3.5rem;
+    }
+  }
 }
