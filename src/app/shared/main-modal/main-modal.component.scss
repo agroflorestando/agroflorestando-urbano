@@ -1,3 +1,5 @@
+@import '../../../styles/tools/brutal-tools';
+
 :host {
   display: flex;
   justify-content: center;
@@ -12,7 +14,9 @@
 }
 
 .modal {
-  margin: 0 auto;
+  @include brutal;
+
+  margin: 0 auto 74px;
   display: block;
   width: 600px;
   background-color: var(--base);

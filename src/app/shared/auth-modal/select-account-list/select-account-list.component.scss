@@ -16,3 +16,18 @@ h2 {
     background-color: var(--baseHover);
   }
 }
+
+.section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: .5rem;
+
+  i-tabler {
+    margin-right: .5rem;
+  }
+
+  &:active {
+    background-color: var(--primary);
+  }
+}
