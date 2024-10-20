@@ -1,4 +1,4 @@
-button.agro-button {
+button.brutal-button {
   @include brutal-border-thin;
   @include brutal-radius;
 
@@ -12,7 +12,7 @@ button.agro-button {
     @include brutal-border-thin-active;
   }
 
-  &.agro-secondary {
+  &.brutal-secondary {
     background-color: var(--secondary);
   }
 }

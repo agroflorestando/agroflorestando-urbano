@@ -1,7 +1,7 @@
 <h2>Add account</h2>
 <form [formGroup]="accountForm" (submit)="onAddAccountSubmit($event)" novalidate autocomplete="off">
   <div [class.error]="submitted && getFormControlErrors('nsec')">
-    <div class="agro-field-container larger">
+    <div class="brutal-field-container larger">
       <label for="addAccountNsecField">Nostr Secret (nsec)</label>
 
       <input #nsec required name="nsec" tabindex="1" maxlength="64" formControlName="nsec" id="addAccountNsecField"
@@ -41,7 +41,7 @@
   </div>
 
   <div [class.error]="submitted && getFormControlErrors('pin')">
-    <div class="agro-field-container larger">
+    <div class="brutal-field-container larger">
       <label for="addAccountPinField">Pin</label>
       
       <input #pin required name="pin" tabindex="2" [maxlength]="pinLength" formControlName="pin" id="addAccountPinField"
@@ -66,7 +66,7 @@
     </ng-container>
   </div>
 
-  <div class="agro-button-group">
+  <div class="brutal-button-group">
     <button
       type="button"
       tabindex="2"

@@ -2,7 +2,7 @@
 @import '../../../../styles/tools/reset-list';
 @import '../../../../styles/tools/brutal-tools';
 
-ul.agro-list {
+ul.brutal-list {
   @include reset-list;
   @include brutal-border-thin;
 

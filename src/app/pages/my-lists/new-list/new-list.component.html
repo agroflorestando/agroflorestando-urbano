@@ -1,37 +1,37 @@
-<section class="agro-page-container">
+<section class="brutal-page-container">
   <h2>Criar nova lista</h2>
   <form id="new-list-form" novalidate autocomplete="off">
-    <div class="agro-field-container">
+    <div class="brutal-field-container">
       <label for="new-list-icone">Icone:</label>
       <input id="new-list-icone" type="text" />
       <emoji-mart (emojiClick)="addEmoji($event)" [style]="{ position: 'relative', 'z-index': '20' }"></emoji-mart>
     </div>
   
-    <div class="agro-field-container">
+    <div class="brutal-field-container">
       <label for="new-list-name-list">Nome da lista:</label>
       <input id="new-list-name-list" type="text" />
     </div>
   
-    <div class="agro-field-container">
+    <div class="brutal-field-container">
       <label for="new-list-description">Descrição:</label>
       <textarea id="new-list-description"></textarea>
     </div>
   
-    <div class="agro-field-container">
+    <div class="brutal-field-container">
       <label for="new-list-tags">Tags (i):</label>
       <input id="new-list-tags" type="text" />
     </div>
   </form>
 
-  <div class="agro-button-group agro-fixed-bottom">
+  <div class="brutal-button-group brutal-fixed-bottom">
     <button 
       [routerLink]="['/my', 'lists']"
-      class="agro-button agro-secondary" 
+      class="brutal-button brutal-secondary" 
       type="button" 
     >Voltar</button>
     
     <button
-      class="agro-button"
+      class="brutal-button"
       form="new-list-form"
       type="submit"
     >Salvar</button>

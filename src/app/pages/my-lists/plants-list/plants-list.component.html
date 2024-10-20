@@ -1,4 +1,4 @@
-<section class="agro-page-container">
+<section class="brutal-page-container">
   <article class="agro-treelist-item">
     <div class="agro-treelist-item-icon">
       {{list.icon}}
@@ -8,13 +8,13 @@
       <span class="agro-treelist-item-info-description">
         {{list.description}}
       </span>
-      <span class="agro-info-author">
+      <span class="brutal-info-author">
         criado por {{list.author}}
       </span>
     </div>
   </article>
 
-  <ul class="agro-list">
+  <ul class="brutal-list">
     <li class="agro-listed-plant" *ngFor="let plant of plants">
       <div class="agro-listed-plant-image">
         <img [src]="plant.image" [alt]="plant.name" />
@@ -26,10 +26,10 @@
 
           <address>{{plant.article.quotes}}</address>
         </blockquote>
-        <span class="agro-info-author">
+        <span class="brutal-info-author">
           planta cadastrada por {{plant.author}}
         </span>
-        <button class="agro-button" type="button">Abrir</button>
+        <button class="brutal-button" type="button">Abrir</button>
       </div>
     </li>
   </ul>

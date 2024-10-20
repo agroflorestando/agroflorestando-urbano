@@ -1,5 +1,5 @@
 <section class="agro-page-container">
-  <ul class="agro-list">
+  <ul class="brutal-list">
     <li *ngFor="let list of lists">
       <article class="agro-treelist-item">
         <div class="agro-treelist-item-icon">
@@ -10,7 +10,7 @@
           <span class="agro-treelist-item-info-description">
             {{list.description}}
           </span>
-          <span class="agro-info-author">
+          <span class="brutal-info-author">
             criado por {{list.author}}
           </span>
         </div>
@@ -21,7 +21,7 @@
             class="agro-button-icon"
           >
             <i-tabler name="caret-right"></i-tabler>
-            <span *ngIf="list.public" class="agro-notification">
+            <span *ngIf="list.public" class="brutal-notification">
               {{list.notifications}}
             </span>
           </button>
@@ -31,6 +31,6 @@
   </ul>
 </section>
 
-<button [routerLink]="['/my', 'lists', 'new']" class="agro-main-button" type="button">
+<button [routerLink]="['/my', 'lists', 'new']" class="brutal-main-button" type="button">
   <i-tabler name="plus"></i-tabler>
 </button>

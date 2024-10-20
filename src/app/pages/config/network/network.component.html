@@ -1,9 +1,9 @@
-<section class="agro-page-container agro-bg-primary">
+<section class="brutal-page-container bg-primary">
   <nav>
-    <ul class="agro-list agro-bg-secondary">
+    <ul class="brutal-list bg-secondary">
       <li *ngFor="let relay of relays">
         {{relay}}
-        <button type="button" class="agro-button-icon agro-bg-danger">
+        <button type="button" class="brutal-button-icon bg-danger">
           <i-tabler name="x"></i-tabler>
         </button>
       </li>
@@ -11,10 +11,10 @@
   </nav>
 
   <form id="network-form" novalidate autocomplete="off">
-    <div class="agro-field-container add-relay larger">
+    <div class="brutal-field-container add-relay larger">
       <label for="network-relay">Incluir relay:</label>
       <input id="network-relay" placeholder="wss://relay.com" type="text" />
-      <button type="button" class="agro-button-icon">
+      <button type="button" class="brutal-button-icon">
         <i-tabler name="world-plus"></i-tabler>
       </button>
     </div>

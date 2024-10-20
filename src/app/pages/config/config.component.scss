@@ -5,7 +5,7 @@
 .agro-page-container {
   padding: 0;
 
-  ul.agro-list {
+  ul.brutal-list {
     @include reset-list;
     border-bottom: $brutalBorderThinSize solid;
     background-color: var(--baseSecondary);
